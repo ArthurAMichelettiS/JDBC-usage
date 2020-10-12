@@ -15,9 +15,9 @@ import java.util.ArrayList;
  * @param <E>
  */
 public abstract class MySQLDAO <E extends Entidade> extends DAO {
-    final String STRING_CONEXAO = "jdbc:mysql://localhost/ssss?useTimezone=true&serverTimezone=UTC";
+    final String STRING_CONEXAO = "jdbc:mysql://localhost:8080/ilumidb?useTimezone=true&serverTimezone=UTC";
     final String USUARIO = "root";
-    final String SENHA = "";
+    final String SENHA = "AvakinMaels10";
     private String tabela;
     
     public MySQLDAO(Class entityClass) {

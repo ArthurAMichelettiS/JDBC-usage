@@ -17,6 +17,7 @@ public class Usuario extends Entidade {
 
     private String login;
 
+
     /**
      * @return the senha
      */
