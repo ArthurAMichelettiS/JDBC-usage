@@ -24,7 +24,7 @@ public class DadosUsuarioMySQLDAO <E extends Entidade> extends MySQLDAO
         try {
             entidade.setNome(rs.getString("nome"));
             entidade.setSobrenome(rs.getString("sobrenome"));
-            entidade.setNumteste(rs.getInt("Numero de testes"));
+            entidade.setNumteste(rs.getInt("Numteste"));
         } catch (SQLException ex) {
             Logger.getLogger(com.dao.acesso.DadosUsuarioMySQLDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
