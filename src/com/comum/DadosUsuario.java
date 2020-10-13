@@ -1,40 +1,37 @@
 package com.comum;
 
 public class DadosUsuario extends Entidade{
-        private String senha;
 
-        private String login;
+    private String Nome;
 
-        public int Id;
+    private String Sobrenome;
 
-        public String Nome;
-
-        public String Sobrenome;
-
-        public int Numteste;
-        /**
-         * @return the senha
-         */
-        public String getSenha() {
-            return senha;
-        }
-
-        /**
-         * @param senha the senha to set
-         */
-        public void setSenha(String senha) {
-            this.senha = senha;
-        }
-
-        public String getLogin() {
-            return  login;
-        }
-
-        public void setLogin(String login) {
-            this.login = login;
-        }
+    private int Numteste;
 
 
+    public String getNome() {
+        return Nome;
     }
+
+    public void setNome(String nome) {
+        Nome = nome;
+    }
+
+    public String getSobrenome() {
+        return Sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        Sobrenome = sobrenome;
+    }
+
+    public int getNumteste() {
+        return Numteste;
+    }
+
+    public void setNumteste(int numteste) {
+        Numteste = numteste;
+    }
+}
 
 

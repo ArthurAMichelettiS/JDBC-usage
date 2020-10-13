@@ -22,10 +22,11 @@ public class DadosUsuarioMySQLDAO <E extends Entidade> extends MySQLDAO
     protected E preencheEntidade(ResultSet rs) {
         DadosUsuario entidade = new DadosUsuario();
         try {
-            entidade.setLogin(rs.getString("Login"));
-            entidade.setSenha(rs.getString("Senha"));
+            entidade.setNome(rs.getString("nome"));
+            entidade.setSobrenome(rs.getString("sobrenome"));
+            entidade.setNumteste(rs.getInt("Numero de testes"));
         } catch (SQLException ex) {
-            Logger.getLogger(com.dao.acesso.UsuarioMySQLDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(com.dao.acesso.DadosUsuarioMySQLDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return (E)entidade;
     }

@@ -15,8 +15,8 @@ import java.util.ArrayList;
  * @param <E>
  */
 public abstract class MySQLDAO <E extends Entidade> extends DAO {
-    final String STRING_CONEXAO = "jdbc:mysql://localhost:8080/ilumidb?useTimezone=true&serverTimezone=UTC";
-    final String USUARIO = "root";
+    final String STRING_CONEXAO = "jdbc:mysql://mysql5004.site4now.net/db_a688e3_jdbc?useTimezone=true&serverTimezone=UTC";
+    final String USUARIO = "a688e3_jdbc";
     final String SENHA = "AvakinMaels10";
     private String tabela;
     
@@ -43,13 +43,6 @@ public abstract class MySQLDAO <E extends Entidade> extends DAO {
     @Override
     public E localiza (String codigo) throws SQLException {
         E entidade = null;
-
-        try {
-            Class.forName("com.lib.jdbc.Driver");
-        }
-        catch (Exception e){
-
-        }
 
         //utiliza o jdbc para estabelecer conexão com o banco de dados
         try (Connection conexao = DriverManager.getConnection(STRING_CONEXAO, USUARIO, SENHA )) {
@@ -106,7 +99,7 @@ public abstract class MySQLDAO <E extends Entidade> extends DAO {
                 }
             }
         }
-        
+
         return entidades;
       }
 }
